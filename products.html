@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Loyal Friends</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    header h1 {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+      alert("Please login first.");
+      location.href = "login.html";
+    }
+  </script>
+
+  <header class="bg-dark text-white p-3">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <h1 class="mb-0">Loyal Friends</h1>
+      <nav class="d-flex w-100 flex-wrap justify-content-between align-items-center mt-3 mt-md-0">
+        <!-- Left side nav -->
+        <div class="d-flex flex-wrap gap-2">
+          <a class="nav-link text-white" href="index.html">Home</a>
+          <a class="nav-link text-white" href="about.html">About</a>
+          <a class="nav-link text-white" href="products.html">Products</a>
+          <a class="nav-link text-white" href="contact.html">Contact</a>
+        </div>
+
+        <!-- Right side nav -->
+        <div>
+          <a class="nav-link text-white" href="login.html">Login</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  <main class="container mt-4">
+    <h2 class="text-center mb-4">Dogs Available for Rehoming</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Beagle -->
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" class="card-img-top" alt="Beagle">
+          <div class="card-body text-center">
+            <h5 class="card-title">Beagle</h5>
+            <a href="contact.html" class="btn btn-warning">Contact to Rehome</a>
+          </div>
+        </div>
+      </div>
+      <!-- Chihuahua -->
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn.britannica.com/44/233244-050-A65D4571/Chihuahua-dog.jpg" class="card-img-top" alt="Chihuahua">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chihuahua</h5>
+            <a href="contact.html" class="btn btn-warning">Contact to Rehome</a>
+          </div>
+        </div>
+      </div>
+      <!-- Shih Tzu -->
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn.britannica.com/05/234205-050-F8D2E018/Shih-tzu-dog.jpg" class="card-img-top" alt="Shih Tzu">
+          <div class="card-body text-center">
+            <h5 class="card-title">Shih Tzu</h5>
+            <a href="contact.html" class="btn btn-warning">Contact to Rehome</a>
+          </div>
+        </div>
+      </div>
+      <!-- Golden Retriever -->
+      <div class="col">
+        <div class="card">
+          <img src="https://www.borrowmydoggy.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F4ij0poqn%2Fproduction%2Fda89d930fc320dd912a2a25487b9ca86b37fcdd6-800x600.jpg&w=1080&q=80" class="card-img-top" alt="Golden Retriever">
+          <div class="card-body text-center">
+            <h5 class="card-title">Golden Retriever</h5>
+            <a href="contact.html" class="btn btn-warning">Contact to Rehome</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pomeranian -->
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn.britannica.com/41/233841-050-4FFECCF1/Pomeranian-dog.jpg" class="card-img-top" alt="Pomeranian">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pomeranian</h5>
+            <a href="contact.html" class="btn btn-warning">Contact to Rehome</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <h2 class="text-center mb-4">Dog Stuffs for Sale</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Leash -->
+<div class="col">
+  <div class="card">
+    <img src="https://atlaspetcompany.com/cdn/shop/products/atlas-pet-compmany-lifetime-leash-climbing-rope-lifetime-warranty-dog-leash-4.jpg?v=1752163846" alt="Dog Leash">
+    <div class="card-body text-center">
+      <h5 class="card-title">Durable Leash</h5>
+      <p class="card-text">Adjustable and comfy leash for daily walks.</p>
+      <a href="checkout.html?product=Durable+Leash" class="btn btn-success">Checkout</a>
+    </div>
+  </div>
+</div>
+
+<!-- Chew Toy -->
+<div class="col">
+  <div class="card">
+    <img src="https://www.westpaw.com/cdn/shop/files/RumpusPDPImage4.jpg?v=1734481436&width=2000"Chew Toy">
+    <div class="card-body text-center">
+      <h5 class="card-title">Chew Toy</h5>
+      <p class="card-text">Fun squeaky toy for playful pups!</p>
+      <a href="checkout.html?product=Chew+Toy" class="btn btn-success">Checkout</a>
+    </div>
+  </div>
+</div>
+
+<!-- Treats -->
+<div class="col">
+  <div class="card">
+    <img src="https://www.flavourandsavour.com/wp-content/uploads/2022/05/pumpkin-peanut-butter-dog-treats-in-a-pile.jpg">
+    <div class="card-body text-center">
+      <h5 class="card-title">Training Treats</h5>
+      <p class="card-text">Healthy, crunchy snacks to reward your loyal friend.</p>
+      <a href="checkout.html?product=Training+Treats" class="btn btn-success">Checkout</a>
+    </div>
+  </div>
+</div>
+  </main>
+</body>
+</html>

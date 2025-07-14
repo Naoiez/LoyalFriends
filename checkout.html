@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Loyal Friends</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function getProductName() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("product") || "Unknown Product";
+    }
+
+    function submitOrder(event) {
+      event.preventDefault();
+      const name = document.getElementById("buyerName").value;
+      const address = document.getElementById("buyerAddress").value;
+
+      if (!name || !address) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your order for ${getProductName()} is confirmed!`);
+      window.location.href = "products.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Checkout</h2>
+    <div class="card p-4">
+      <p><strong>Product:</strong> <span id="productName"></span></p>
+
+      <form onsubmit="submitOrder(event)">
+        <div class="mb-3">
+          <label for="buyerName" class="form-label">Full name</label>
+          <input type="text" class="form-control" id="buyerName" required />
+        </div>
+        <div class="mb-3">
+          <label for="buyerAddress" class="form-label">Shipping Address</label>
+          <textarea class="form-control" id="buyerAddress" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Confirm Order</button>
+        <a href="products.html" class="btn btn-secondary ms-2">Cancel</a>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("productName").textContent = getProductName();
+  </script>
+</body>
+</html>

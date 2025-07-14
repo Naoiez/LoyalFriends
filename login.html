@@ -18,20 +18,22 @@
   </div>
 
   <script>
-    function validateLogin() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const errorMsg = document.getElementById("login-error");
+  function validateLogin() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+    const errorMsg = document.getElementById("login-error");
 
-      if (username === "admin" && password === "1234") {
-        sessionStorage.setItem("loggedIn", "true");
-        window.location.href = "products.html";
-        return false;
-      } else {
-        errorMsg.textContent = "Invalid username or password.";
-        return false;
-      }
+    const storedUser = JSON.parse(localStorage.getItem("loyalUser"));
+
+    if (storedUser && username === storedUser.username && password === storedUser.password) {
+      sessionStorage.setItem("loggedIn", "true");
+      window.location.href = "index.html";
+      return false;
+    } else {
+      errorMsg.textContent = "Invalid username or password.";
+      return false;
     }
-  </script>
+  }
+</script>
 </body>
 </html>
